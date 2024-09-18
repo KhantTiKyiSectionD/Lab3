@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>Simple Blog Post Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            text-align: left;
+        }
+        form {
+            max-width: 350px; 
+            margin: 0;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px; 
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Submit a Blog Post</h2>
+
+<form onsubmit="showAlert(event)">
+    <label>Title:</label>
+    <input type="text" required>
+
+    <label>Author:</label>
+    <input type="text" required>
+
+    <label>Content:</label>
+    <textarea rows="4" required></textarea>
+
+    <label>Category:</label>
+    <select required>
+        <option value="">Select</option>
+        <option value="sport">Sports</option>
+        <option value="food">Food</option>
+    </select>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    function showAlert(event) {
+        event.preventDefault(); 
+        alert('Form submitted!'); 
+    }
+</script>
+
+</body>
+</html>
